@@ -17,6 +17,8 @@ terraform {
   }
 }
 
-
+provider "azurerm" { 
+  features {}  
+}
 
 # Define your Azure resources below
