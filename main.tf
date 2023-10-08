@@ -24,15 +24,6 @@ provider "azurerm" {
       recover_soft_deleted         = true
     }
 
-    app_configuration {
-      purge_soft_delete_on_destroy = true
-      recover_soft_deleted         = true
-    }
-
-    application_insights {
-      disable_generated_rule = false
-    }
-
     cognitive_account {
       purge_soft_delete_on_destroy = true
     }
@@ -46,18 +37,13 @@ provider "azurerm" {
       permanently_delete_on_destroy = true
     }
 
-    managed_disk {
-      expand_without_downtime = true
-    }
+
 
     resource_group {
       prevent_deletion_if_contains_resources = true
     }
 
-    subscription {
-      prevent_cancellation_on_destroy = false
-    }
-
+ 
     template_deployment {
       delete_nested_items_during_deletion = true
     }
