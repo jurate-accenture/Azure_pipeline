@@ -1,13 +1,15 @@
-# company
 variable "company" {
-  type = string
+  type        = string
   description = "This variable defines the name of the company"
+  default     = "mydefaultcompany"
 }
-# environment
+
 variable "environment" {
-  type = string
+  type        = string
   description = "This variable defines the environment to be built"
+  default     = "mydefaultenvironment"
 }
+
 # azure region
 variable "location" {
   type = string
