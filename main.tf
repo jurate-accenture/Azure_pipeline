@@ -1,6 +1,6 @@
 # Define Terraform provider
 terraform {
-  required_version = ">= 1.3"
+  required_version = ">= 0.15"
 
   backend "azurerm" {
     resource_group_name  = "Terraform_pipelines"
@@ -23,5 +23,6 @@ provider "azurerm" {
     virtual_network_peering = true
   }
 }
+
 
 # Define your Azure resources below
