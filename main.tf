@@ -15,20 +15,11 @@ terraform {
   }
 }
 # Configure the Azure provider
-provider "azurerm" { 
-
- features = {
-    # Enable the Virtual Network Peering feature
-    virtual_network_peering { }
-    
-    # Enable the Managed Disks feature
-    managed_disks { }
-    
-    # Enable the Advanced Networking features
-    advanced_networking { }
-  }
-
-
+provider "azurerm" {
+  features = {
+    virtual_network_peering = {}
   }
 }
+
+ } }
 
