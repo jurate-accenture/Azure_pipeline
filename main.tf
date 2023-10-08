@@ -20,6 +20,6 @@ terraform {
 # Configure the Azure provider
 provider "azurerm" {
   features = {
-    virtual_network_peering = {}
+    virtual_network_peering = true
   }
 }
