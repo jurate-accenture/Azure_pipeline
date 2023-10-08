@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "state-rg" {
 # Create a Storage Account for the Terraform State File
 resource "azurerm_storage_account" "state-sta" {
   depends_on = [azurerm_resource_group.state-rg]  
-  name = "${lower(var.company)}tf${random_string.tf-name.result}"
+  name = "${lower(var.company)}tf${substr(random_string.tf-name.result, 0, 21)}"
   resource_group_name = azurerm_resource_group.state-rg.name
   location = azurerm_resource_group.state-rg.location
   account_kind = "StorageV2"
