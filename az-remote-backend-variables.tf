@@ -4,10 +4,10 @@ variable "company" {
   description = "This variable defines the name of the company"
 }
 # environment
-variable "environment" {
-  type = string
-  description = "This variable defines the environment to be built"
-}
+#variable "environment" {
+ # type = string
+ # description = "This variable defines the environment to be built"
+#}
 # azure region
 variable "location" {
   type = string
