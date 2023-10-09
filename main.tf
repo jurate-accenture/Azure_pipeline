@@ -6,7 +6,7 @@ terraform {
     resource_group_name  = "Terraform_pipelines"
     storage_account_name = "terraformjz177"
     container_name       = "files"
-    key                  = "actions.tfstate"
+    key                  = "actions_new.tfstate"
   }
 
   required_providers {
