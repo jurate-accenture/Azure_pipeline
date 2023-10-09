@@ -1,8 +1,8 @@
 
 
 # Create a Resource Group for the Terraform State File
-resource "azurerm_resource_group2" "Terraform_pipelines" {
-  name = "Terraform_pipelines2"
+resource "azurerm_resource_group" "Terraform_pipelines" {
+  name = "Terraform_pipelines"
   location = var.location
   
   lifecycle {
@@ -16,10 +16,10 @@ resource "azurerm_resource_group2" "Terraform_pipelines" {
 
 # Create a Storage Account for the Terraform State File
 resource "azurerm_storage_account" "terraformjz177" {
-  depends_on               = [azurerm_resource_group.Terraform_pipelines2]
+  depends_on               = [azurerm_resource_group.Terraform_pipelines]
   name = "terraformjz177"
-  resource_group_name      = azurerm_resource_group.Terraform_pipelines2.name
-  location                 = azurerm_resource_group.Terraform_pipelines2.location
+  resource_group_name      = azurerm_resource_group.Terraform_pipelines.name
+  location                 = azurerm_resource_group.Terraform_pipelines.location
   account_kind             = "StorageV2"
   account_tier             = "Standard"
   access_tier              = "Hot"
