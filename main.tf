@@ -3,7 +3,7 @@ terraform {
   required_version = ">= 0.15"
 
   backend "azurerm" {
-    resource_group_name  = "Terraform_pipelines"
+    resource_group_name  = "Terraform_pipelines2"
     storage_account_name = "terraformjz177"
     container_name       = "files"
     key                  = "actions.tfstate"
@@ -58,3 +58,4 @@ provider "azurerm" {
     }
   }
 }
+
