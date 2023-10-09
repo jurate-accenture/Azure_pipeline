@@ -1,6 +1,6 @@
 
 
-# Create a Resource Group for the Terraform State File
+# Create a Resource Group for the Terraform State File jz
 resource "azurerm_resource_group" "Terraform_pipelines" {
   name = "Terraform_pipelines"
   location = var.location
